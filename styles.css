@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    height: 100%;
+}
+
+.sidebar {
+    grid-column: 1 / 2;
+    grid-row: 1 /2;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: peachpuff;
+    border-right: 1px solid black;
+    padding: 10px;
+}
+
+.openForm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    background-color: darkcyan;
+    color: whitesmoke;
+    font-size: 16px;
+    font-weight: 700;
+    height: 3em;
+    width: 100%;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.newForm {
+    padding-top: 8px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 80%;
+}
+
+.readRow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.titleRow,
+.authorRow,
+.pagesRow,
+.readRow,
+.submitRow {
+    padding-bottom: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.library {
+    grid-column: 2 / 3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 10px;
+    background-color: #d8ccb4;
+}
+
+.bookCard {
+    background-color: rgb(255, 184, 122);
+    /* border: 3px solid black; */
+    border-radius: 8px;
+    display: flex;
+    min-width: 25%;
+    height: 200px;
+    flex-direction: column;
+    gap: 5px;
+    padding: 8px 8px 8px 8px;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 2px 2px 10px black;
+}
+
+.title {
+    font-size: 20px;
+}
+
+.author {
+    font-style: italic;
+}
+
+.haveRead {
+    background-color:green;
+    color: white;
+    font-size: 16px;
+    padding: 4px 4px 4px 4px;
+    border-radius: 8px;
+}
+
+.notRead {
+    background-color: darkred;
+    color: white;
+    font-size: 16px;
+    padding: 4px 4px 4px 4px;
+    border-radius: 8px;
+}
+
+.remove {
+    font-size: 16px;
+    padding: 4px 4px 4px 4px;
+    border-radius: 8px;
+}
+
+.titleRow input[type="text"], 
+.authorRow input[type="text"], 
+.pagesRow input[type="number"], 
+.readRow input[type="text"] {
+    display: flex;
+    flex: 1;
+}

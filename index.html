@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+     <div class="content">
+        <div id="library" class="library">
+        </div>
+        <div class="sidebar">
+                <button class="openForm" id="openForm" onclick="bookForm()">Add Book</button>
+                <form class="newForm" id="newForm" style="display: none" onsubmit="addBook();return false">
+                        <div class="titleRow">
+                                <label for="title">Title</label>
+                                <input  type="text"
+                                        id="title" 
+                                        name="title">
+                        </div>
+                        <div class="authorRow">
+                                <label for="author">Author</label>
+                                <input  type="text" 
+                                        id="author" 
+                                        name="author">
+                        </div>
+                        <div class="pagesRow">
+                                <label for="pages">Pages</label>
+                                <input  type="number" 
+                                        id="pages" 
+                                        name="pages">
+                        </div>
+                        <div class="readRow">
+                        <label for="read">Have you read this?</label>
+                                <input  type="checkbox" 
+                                        id="read" 
+                                        name="read">
+                        </div>
+                        <div class="submitRow">
+                                <input type="submit">
+                        </div>
+                        
+                </form>
+        </div>
+    </div>
+
+    <script src="javascript.js"></script>
+</body>
+</html>
