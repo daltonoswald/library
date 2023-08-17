@@ -4,12 +4,22 @@ const newBookForm = document.getElementById('newBookForm')
 
 newForm.onsubmit= addBook;
 
-function Book(id, title, author, pages, read) {
-    this.id = id;
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
+// function Book(id, title, author, pages, read) {
+//     this.id = id;
+//     this.title = title;
+//     this.author = author;
+//     this.pages = pages;
+//     this.read = read;
+// }
+
+class Book {
+    constructor(id, title, author, pages, read) {
+        this.id = id;
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
 }
 
 
@@ -19,10 +29,16 @@ let idCount = myLibrary.length +1;
 const theHobbit = new Book(idCount, 'The Hobbit', 'J. R. R. Tolkien', 295, false);
 myLibrary.push(theHobbit);
 createBookCard(idCount, 'The Hobbit', 'J. R. R. Tolkien', 295, false)
+
 idCount = myLibrary.length +1;
 const toKillAMockingbird = new Book(idCount, 'To Kill a Mockingbird', 'Harper Lee', 336, true);
 myLibrary.push(toKillAMockingbird);
 createBookCard(idCount, 'To Kill a Mockingbird', 'Harper Lee', 336, true);
+
+idCount = myLibrary.length +1;
+const theCatcherInTheRye = new Book(idCount, 'The Catcher in the Rye', 'J. D. Salinger', 234, true);
+myLibrary.push(theCatcherInTheRye);
+createBookCard(idCount, 'The Catcher in the Rye', 'J. D. Salinger', 234, true);
 
 function bookForm() {
     let newForm = document.getElementById('newForm');
