@@ -60,6 +60,7 @@ body {
 .pagesRow,
 .readRow,
 .submitRow {
+    max-width: 100%;
     padding-bottom: 8px;
     padding-left: 8px;
     padding-right: 8px;
@@ -128,4 +129,28 @@ body {
 .readRow input[type="text"] {
     display: flex;
     flex: 1;
+    max-width: 100%;
 }
+
+.titleRow label, 
+.authorRow label, 
+.pagesRow label, 
+.readRow label {
+    display: flex;
+    flex: 1;
+    max-width: 100%;
+    word-break: break-all;
+}
+
+/* .invalid {
+    border-color: red;
+    background-color: peachpuff;
+  }
+
+
+  .titleRow input[type="text"]:invalid, 
+.authorRow input[type="text"]:invalid, 
+.pagesRow input[type="number"]:invalid, 
+.readRow input[type="text"]:invalid {
+    border-color: red;
+} */

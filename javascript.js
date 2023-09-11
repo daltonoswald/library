@@ -1,8 +1,11 @@
 let library = document.getElementById('library');
 library.innerHTML = "";
 const newBookForm = document.getElementById('newBookForm')
+const titleField = document.getElementById('title');
+const authorField = document.getElementById('author');
+const pagesField = document.getElementById('pages');
 
-newForm.onsubmit= addBook;
+// newForm.onsubmit= addBook;
 
 // function Book(id, title, author, pages, read) {
 //     this.id = id;
@@ -49,6 +52,35 @@ function bookForm() {
     }
 }
 
+window.addEventListener('load', () => {
+    titleField.setCustomValidity("Please enter the title of the book.");
+    authorField.setCustomValidity("Please enter the author of the book.");
+    pagesField.setCustomValidity("Please enter the amount of pages in the book.");
+})
+
+titleField.addEventListener("input", () => {
+    if (titleField.validity.valueMissing) {
+        titleField.setCustomValidity("Please enter the title of the book.")
+    } else {
+        titleField.setCustomValidity("");
+    }
+})
+
+authorField.addEventListener("input", () => {
+    if (authorField.validity.valuemissing) {
+        authorField.setCustomValidity("Please enter the author of the book.");
+    } else {
+        authorField.setCustomValidity("");
+    }
+})
+
+pagesField.addEventListener("input", () => {
+    if (pagesField.validity.valueMissing) {
+        pagesField.setCustomValidity("Please enter the amount of pages in the book.");
+    } else  {
+        pagesField.setCustomValidity("");
+    }
+})
 
 // const getBook = () => {
 //     const id = myLibrary.length +1;
@@ -60,7 +92,7 @@ function bookForm() {
 // }
 
 function addBook (e) {
-    e.preventDefault();
+    // e.preventDefault();
     idCount++;
     let titleText = document.querySelector('#title');
     let authorText = document.querySelector('#author');
